@@ -1,0 +1,21 @@
+<div class='container'>
+    <div class="card m-3 shadow-lg rounded-lg" *ngFor="let station of stationLi">
+        <a [routerLink]="['map', station.id]">
+            <div class="card-body">
+                <h2 class="mb-5">{{station.id}} {{ station.label }}</h2>
+                <div class="row">
+                    <div class="col-6 row justify-content-center">
+                        <img src="assets/img/bicycle_icon.png" alt="bike" height='40px'>
+                        <p class='col-12 text-center mb-0'>Available bikes: </p>
+                        <h3 class='col-12 text-center py-0 text-success'>{{ station.bikes }}</h3>
+                    </div>
+                    <div class="col-6 row justify-content-center">
+                        <img src="../../assets/img/lock.png" alt="lock" height='40px'>
+                        <p class='col-12 text-center mb-0'>Available places: </p>
+                        <h3 class='col-12 text-center py-0'>{{ station.free_racks }}</h3>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
